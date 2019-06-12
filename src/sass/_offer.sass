@@ -59,7 +59,13 @@
 			text-decoration: none	
 
 @media (max-width: 1200px)  
-	.offer 
+	.offer
+		background: url('../image/offer/offer-bg-min.png') no-repeat
+		background-position: center right
+		background-size: contain
+		padding: 0
+		&-block
+			padding: 20px
 		&__input
 			width: 100%	
 			margin-bottom: 10px
@@ -71,7 +77,17 @@
 				top: 300px
 			#phone-error
 				left: 150px
-				top: 370px		
+				top: 370px
+@media (max-width: 960px)	
+	.offer
+		&-block 
+			padding: 0
+			padding-right: 20px	
+		&__title
+			padding-top: 20px
+		&__feedback, &__tell
+			display: inline-block
+			max-width: 160px					
 @media (max-width: 870px)
 	.offer
 		background: #ffffff
@@ -85,7 +101,7 @@
 				top: 230px
 			#phone-error
 				left: 100px
-				top: 300px		  
+				top: 300px						  
 @media (max-width: 550px)
 	.offer
 		padding-top: 50px 
@@ -110,4 +126,5 @@
 			#phone-error
 				left: 150px
 				top: 265px	
-
+		&__feedback, &__tell
+			min-width: 280px
