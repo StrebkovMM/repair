@@ -13,7 +13,12 @@
 		margin-top: 68px
 		margin-bottom: 25px
 		display: flex
-		justify-content: space-between	
+		justify-content: space-between
+		&.slick-arrow
+			img
+				outline: none	
+				text-decoration: none
+			
 .slider
 	&__item
 			margin-left: 20px 
@@ -23,6 +28,7 @@
 			margin: auto	
 @media (max-width: 540px)		
 	.portfolio
+		background: $secondary 
 		padding-top: 50px
 		padding-bottom: 50px
 		&__title 

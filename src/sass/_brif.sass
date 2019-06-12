@@ -18,6 +18,7 @@
 		max-width: 370px
 		margin-bottom: 20px
 		height: 60px
+		outline: none
 		&.phone
 			&.error
 				margin-top: 20px
@@ -29,6 +30,7 @@
 		height: 70px		
 		width: 100%
 		max-width: 370px
+		outline: none
 .interview
 	padding-right: 70px
 	&__title
@@ -88,6 +90,7 @@
 @media (max-width: 1200px)
 	.brif
 		margin-top: 20px
+		padding: 10px 0
 		&__form
 			padding-left: 30px
 	.interview
@@ -153,6 +156,10 @@
 				left: 130px				
 @media (max-width: 450px)	
 	.brif
+		background-image: url('../image/brif/brif-color-bg-min.png'),url('../image/brif/brif-bg.jpg')
+		background-position: top center, center bottom
+		background-size: 100% 50%, cover
+		background-repeat: repeat-x, no-repeat
 		margin-top: 0
 		padding-top: 45px
 		&__form

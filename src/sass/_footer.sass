@@ -73,24 +73,32 @@
 			flex-basis: 100%
 			position: absolute
 			top: 460px
-@media (max-width: 768px)	
-	.contacts
-		&-list
-			display: flex
-			flex-direction: column !important
+// @media (max-width: 768px)	
+// 	.contacts
+// 		&__title
+// 		text-align: center
+// 		&-list
+// 			display: flex
+// 			flex-direction: column !important
+// 			align-items: end
 @media (max-width: 768px)
 	.footer
 		.map
 			top: 450px
 		.contacts
-			text-align: left
-			padding-top: 0
+			text-align: center
+			padding-top: 40px
 			&__title
 				font-size: 18px
-				line-height: 1.4	
+				line-height: 1.4
 			&-list
 				display: flex
-				align-items: flex-start
+				align-items: flex-center
+				justify-content: flex-start
+				flex-direction: column	
 				&__icon
 					img
 						margin-top: 0	!important		
+				&__item
+					min-width: 190px
+					text-align: left 

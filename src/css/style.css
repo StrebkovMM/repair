@@ -377,12 +377,12 @@ img {
   font-size: 15px;
   border-radius: 10px; }
 
-.arrows__left, .arrows__right {
-  cursor: pointer; }
-
 @media (min-width: 1200px) {
   .button:hover {
     background-color: #ffdb33;
+    cursor: pointer; } }
+@media (min-width: 992px) {
+  .arrows__left, .arrows__right {
     cursor: pointer; } }
 @media (max-width: 1200px) {
   .container {
@@ -526,7 +526,8 @@ img {
     margin-left: 30px;
     font-size: 13px;
     font-family: 'Museo Sans Bold', sans-serif;
-    font-weight: 700; }
+    font-weight: 700;
+    outline: none; }
   .navbar__phone {
     color: #333333;
     font-size: 20px;
@@ -661,6 +662,7 @@ img {
     max-width: 250px;
     margin-bottom: 30px; }
   .offer__input {
+    outline: none;
     margin-bottom: 30px;
     width: 240px; }
     .offer__input:first-child {
@@ -679,7 +681,8 @@ img {
     width: 100%;
     min-height: 70px;
     font-family: 'Museo Sans Bold', sans-serif;
-    font-weight: 700; }
+    font-weight: 700;
+    outline: none; }
   .offer__footer {
     margin-top: 15px;
     display: -webkit-box;
@@ -866,6 +869,9 @@ img {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between; }
+    .portfolio__arrows.slick-arrow img {
+      outline: none;
+      text-decoration: none; }
 
 .slider__item {
   margin-left: 20px; }
@@ -875,6 +881,7 @@ img {
     margin: auto; } }
 @media (max-width: 540px) {
   .portfolio {
+    background: #f5f5f5;
     padding-top: 50px;
     padding-bottom: 50px; }
     .portfolio__title {
@@ -907,31 +914,11 @@ img {
 .card {
   text-align: center;
   border: 1px solid #e8e8e8; }
-  .card:hover {
-    -webkit-box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
-            box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
-    -webkit-transition: 0.2s;
-    transition: 0.2s; }
-    .card:hover .card__image:before {
-      opacity: 1; }
   .card__text {
     padding-top: 35px;
     padding-bottom: 40px; }
   .card__image {
     position: relative; }
-    .card__image::before {
-      content: "";
-      position: absolute;
-      display: block;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: -webkit-gradient(linear, left bottom, left top, from(#ffd200), to(rgba(255, 255, 255, 0)));
-      background-image: linear-gradient(to top, #ffd200 0%, rgba(255, 255, 255, 0) 100%);
-      opacity: 0;
-      -webkit-transition: 0.2s;
-      transition: 0.2s; }
   .card__link {
     display: inline-block;
     font-size: 16px;
@@ -941,20 +928,6 @@ img {
     color: #333333;
     padding-left: 5px;
     position: relative; }
-    .card__link:hover:after {
-      height: 12px; }
-    .card__link:after {
-      content: "";
-      display: block;
-      z-index: -1;
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-      width: 100%;
-      height: 3px;
-      background-color: #ffd200;
-      -webkit-transition: 0.2s;
-      transition: 0.2s; }
   .card__title {
     margin-top: -1px;
     margin-bottom: 28px;
@@ -971,6 +944,41 @@ img {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
 
+@media (min-width: 992px) {
+  .card:hover {
+    -webkit-box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
+    -webkit-transition: 0.2s;
+    transition: 0.2s; }
+    .card:hover .card__image:before {
+      opacity: 1; }
+  .card__image::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#ffd200), to(rgba(255, 255, 255, 0)));
+    background-image: linear-gradient(to top, #ffd200 0%, rgba(255, 255, 255, 0) 100%);
+    opacity: 0;
+    -webkit-transition: 0.2s;
+    transition: 0.2s; }
+  .card__link:hover:after {
+    height: 12px; }
+  .card__link:after {
+    content: "";
+    display: block;
+    z-index: -1;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #ffd200;
+    -webkit-transition: 0.2s;
+    transition: 0.2s; } }
 @media (max-width: 768px) {
   .price__card {
     display: block;
@@ -1233,7 +1241,8 @@ img {
     width: 100%;
     max-width: 370px;
     margin-bottom: 20px;
-    height: 60px; }
+    height: 60px;
+    outline: none; }
     .brif__input.phone.error {
       margin-top: 20px; }
     .brif__input.error {
@@ -1243,7 +1252,8 @@ img {
     margin-bottom: 30px;
     height: 70px;
     width: 100%;
-    max-width: 370px; }
+    max-width: 370px;
+    outline: none; }
 
 .interview {
   padding-right: 70px; }
@@ -1310,7 +1320,8 @@ img {
 
 @media (max-width: 1200px) {
   .brif {
-    margin-top: 20px; }
+    margin-top: 20px;
+    padding: 10px 0; }
     .brif__form {
       padding-left: 30px; }
 
@@ -1376,6 +1387,10 @@ img {
     left: 130px; } }
 @media (max-width: 450px) {
   .brif {
+    background-image: url("../image/brif/brif-color-bg-min.png"), url("../image/brif/brif-bg.jpg");
+    background-position: top center, center bottom;
+    background-size: 100% 50%, cover;
+    background-repeat: repeat-x, no-repeat;
     margin-top: 0;
     padding-top: 45px; }
     .brif__form {
@@ -1513,20 +1528,11 @@ img {
       position: absolute;
       top: 460px; } }
 @media (max-width: 768px) {
-  .contacts-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical !important;
-    -webkit-box-direction: normal !important;
-        -ms-flex-direction: column !important;
-            flex-direction: column !important; } }
-@media (max-width: 768px) {
   .footer .map {
     top: 450px; }
   .footer .contacts {
-    text-align: left;
-    padding-top: 0; }
+    text-align: center;
+    padding-top: 40px; }
     .footer .contacts__title {
       font-size: 18px;
       line-height: 1.4; }
@@ -1534,10 +1540,20 @@ img {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      -webkit-box-align: start;
-          -ms-flex-align: start;
-              align-items: flex-start; }
+      -webkit-box-align: flex-center;
+          -ms-flex-align: flex-center;
+              align-items: flex-center;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; }
       .footer .contacts-list__icon img {
-        margin-top: 0 !important; } }
+        margin-top: 0 !important; }
+      .footer .contacts-list__item {
+        min-width: 190px;
+        text-align: left; } }
 
 /*# sourceMappingURL=style.css.map */

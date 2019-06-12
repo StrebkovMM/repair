@@ -30,14 +30,16 @@ img
 	padding: 20px 26px
 	font-size: 15px
 	border-radius: 10px
-.arrows	
-	&__left, &__right
-		cursor: pointer
+
 @media (min-width: 1200px)
 	.button 
 		&:hover 	
 			background-color: lighten($main-color, 10%)
-			cursor: pointer		
+			cursor: pointer	
+@media (min-width: 992px)	
+	.arrows	
+		&__left, &__right
+			cursor: pointer			
 @media (max-width: 1200px)
 	.container 
 		width: 760px			
