@@ -1,0 +1,30 @@
+.statement
+	background-color: $main-color
+	text-align: center
+	margin-top: 22px
+	padding-bottom: 90px
+
+	&__title
+		margin: auto
+		font-size: 32px
+		line-height: 50px
+		padding-top: 20px 
+		+reg
+		max-width: 900px
+	&__subtitle
+		padding-left: 10px		
+		font-size: 32px
+		line-height: 50px
+		letter-spacing: 0.5px
+	&__mobtitle 
+		display: none
+@media (max-width: 658px)
+	.statement
+		margin-top: 0
+		padding-bottom: 70px
+		&__title, &__subtitle
+			display: none
+		&__mobtitle
+			display: block	
+			font-size: 18px
+			line-height: 1.4

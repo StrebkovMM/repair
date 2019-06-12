@@ -1,0 +1,95 @@
+.footer 
+	position: relative
+	.map
+		width: 50%
+		height: 640px
+		position: absolute
+		left: 0
+		top: 0
+	.contacts
+		flex-basis: 50%
+		padding-top: 72px
+		padding-left: 209px
+		&__title
+			+bold
+			font-size: 22px
+			line-height: 1.4
+			margin-bottom: 95px
+			max-width: 300px	
+		&-block
+			display: flex	
+			justify-content: flex-end
+		&-list 
+			padding: 0
+			list-style: none
+			margin-top: 0
+			.text-bold
+				+bold
+			&__icon
+				width: 20px
+				height: 20px
+				text-align: center
+				line-height: 33px
+				margin-right: 25px
+
+			&__item
+				display: flex
+				align-items: flex-start	
+				margin-bottom: 30px
+				a 
+					text-decoration: none
+					color: $text-color
+					+bold
+			&__text
+				line-height: 26px
+				font-size: 16px	
+@media (max-width: 1200px)	
+	.footer
+		.contacts
+			padding-left: 50px			
+@media (max-width: 1144px)
+	.footer
+		position: relative
+		.contacts
+			flex-basis: 100%
+			padding-left: 0
+			text-align: center
+			&-list
+				display: flex
+				flex-direction: row
+				justify-content: space-between
+				align-items: center
+				&__icon
+					img
+						&:first-child
+							margin-top: 25px
+			&__title
+				max-width: 400px
+				margin: auto
+				margin-bottom: 50px
+		.map
+			width: 100%
+			flex-basis: 100%
+			position: absolute
+			top: 460px
+@media (max-width: 768px)	
+	.contacts
+		&-list
+			display: flex
+			flex-direction: column !important
+@media (max-width: 768px)
+	.footer
+		.map
+			top: 450px
+		.contacts
+			text-align: left
+			padding-top: 0
+			&__title
+				font-size: 18px
+				line-height: 1.4	
+			&-list
+				display: flex
+				align-items: flex-start
+				&__icon
+					img
+						margin-top: 0	!important		
