@@ -354,21 +354,11 @@ img {
   width: 1200px;
   margin: 0 auto; }
 
-@media (max-width: 1200px) {
-  .container {
-    width: 760px; } }
-@media (max-width: 768px) {
-  .container {
-    max-width: 580px;
-    width: 90%; } }
 .button {
   border-radius: 10px;
   background-color: #ffd200;
   border: none;
   padding: 20px 30px; }
-  .button:hover {
-    background-color: #ffdb33;
-    cursor: pointer; }
 
 .section {
   padding: 70px 0; }
@@ -390,6 +380,17 @@ img {
 .arrows__left, .arrows__right {
   cursor: pointer; }
 
+@media (min-width: 1200px) {
+  .button:hover {
+    background-color: #ffdb33;
+    cursor: pointer; } }
+@media (max-width: 1200px) {
+  .container {
+    width: 760px; } }
+@media (max-width: 768px) {
+  .container {
+    max-width: 580px;
+    width: 90%; } }
 .animated {
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
@@ -662,10 +663,18 @@ img {
   .offer__input {
     margin-bottom: 30px;
     width: 240px; }
-    .offer__input.phone.error {
-      margin-right: 10px; }
     .offer__input:first-child {
       margin-right: 10px; }
+  .offer__form #username-error {
+    position: absolute;
+    left: 60px;
+    bottom: 173px;
+    color: red; }
+  .offer__form #phone-error {
+    position: absolute;
+    left: 305px;
+    top: 255px;
+    color: red; }
   .offer__button {
     width: 100%;
     min-height: 70px;
@@ -693,13 +702,26 @@ img {
     width: 100%;
     margin-bottom: 10px; }
   .offer__button {
-    font-size: 12px; } }
+    font-size: 12px; }
+  .offer__form #username-error {
+    left: 150px;
+    top: 300px; }
+  .offer__form #phone-error {
+    left: 150px;
+    top: 370px; } }
 @media (max-width: 870px) {
   .offer {
     background: #ffffff; }
     .offer-block {
-      width: 100%;
-      padding-right: 0px; } }
+      width: 90%;
+      padding-right: 0px;
+      margin: auto; }
+    .offer__form #username-error {
+      left: 100px;
+      top: 230px; }
+    .offer__form #phone-error {
+      left: 100px;
+      top: 300px; } }
 @media (max-width: 550px) {
   .offer {
     padding-top: 50px;
@@ -716,7 +738,13 @@ img {
       font-size: 14px;
       padding: 20px 45px; }
     .offer__footer {
-      display: block; } }
+      display: block; }
+    .offer__form #username-error {
+      left: 150px;
+      top: 195px; }
+    .offer__form #phone-error {
+      left: 150px;
+      top: 265px; } }
 /* Slider */
 .slick-slider {
   position: relative;
@@ -1016,8 +1044,7 @@ img {
 
 @media (max-width: 1200px) {
   .step:after {
-    top: -12px;
-    right: -23%; } }
+    display: none; } }
 @media (max-width: 768px) {
   .step {
     margin-bottom: 30px;
@@ -1094,9 +1121,8 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     padding: 0 36px; }
 .advantages__title {
   color: #333333;
@@ -1132,6 +1158,16 @@ img {
             justify-content: space-between; }
 
 @media (max-width: 1200px) {
+  .advantages-contract {
+    margin-right: 15px; }
+    .advantages-contracts {
+      padding-left: 0;
+      padding-right: 0;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: distribute;
+          justify-content: space-around; }
   .advantages-block {
     margin: 0 auto;
     margin-bottom: 30px; }
@@ -1175,7 +1211,7 @@ img {
       padding-left: 0;
       padding-right: 0; } }
 .brif {
-  margin-top: 120px;
+  margin-top: 100px;
   color: #333333;
   background-image: url("../image/brif/brif-color-bg-min.png"), url("../image/brif/brif-bg.jpg");
   background-position: left center, center right;
@@ -1273,8 +1309,10 @@ img {
   display: block; }
 
 @media (max-width: 1200px) {
-  .brif__form {
-    padding-left: 30px; }
+  .brif {
+    margin-top: 20px; }
+    .brif__form {
+      padding-left: 30px; }
 
   .interview {
     padding-right: 30px; }
@@ -1292,11 +1330,13 @@ img {
     margin-bottom: 15px; }
   .form__subtitle {
     margin-bottom: 30px; } }
-@media (max-width: 780px) {
+@media (max-width: 974px) {
   .brif {
-    background-image: url("../image/brif-color-bg.png"), url("../image/brif-bg.jpg");
+    margin-top: 0px;
+    padding-top: 0px;
+    background-image: url("../image/brif/brif-color-bg-min.png"), url("../image/brif/brif-bg.jpg");
     background-position: top center, center bottom;
-    background-size: 100% 50%, cover;
+    background-size: 100% 45%, cover;
     background-repeat: repeat-x, no-repeat; }
     .brif-block {
       -webkit-box-orient: vertical;
@@ -1304,10 +1344,36 @@ img {
           -ms-flex-direction: column;
               flex-direction: column; }
     .brif__form {
-      margin-top: 80px; }
+      margin-top: 80px;
+      position: relative; }
+      .brif__form #username-error {
+        color: red;
+        position: absolute;
+        top: 180px;
+        left: 230px; }
+      .brif__form #phone-error {
+        color: red;
+        position: absolute;
+        top: 280px;
+        left: 230px; }
+      .brif__form #email-error {
+        color: red;
+        position: absolute;
+        top: 380px;
+        left: 230px; }
 
   .interview {
     padding-left: 30px; } }
+@media (max-width: 777px) {
+  .brif__form #username-error {
+    top: 215px;
+    left: 130px; }
+  .brif__form #phone-error {
+    top: 318px;
+    left: 130px; }
+  .brif__form #email-error {
+    top: 415px;
+    left: 130px; } }
 @media (max-width: 450px) {
   .brif {
     margin-top: 0;
@@ -1315,6 +1381,15 @@ img {
     .brif__form {
       margin-top: 30px;
       padding-left: 0; }
+      .brif__form #username-error {
+        top: 195px;
+        left: 30px; }
+      .brif__form #phone-error {
+        top: 300px;
+        left: 30px; }
+      .brif__form #email-error {
+        top: 395px;
+        left: 30px; }
 
   .interview {
     padding-left: 0;
@@ -1343,7 +1418,8 @@ img {
     margin: auto;
     max-width: 150px; } }
 .footer {
-  position: relative; }
+  position: relative;
+  color: #333333; }
   .footer .map {
     width: 50%;
     height: 640px;

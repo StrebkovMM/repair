@@ -1,5 +1,5 @@
 .brif
-	margin-top: 120px
+	margin-top: 100px
 	color: $text-color
 	background-image: url('../image/brif/brif-color-bg-min.png'),url('../image/brif/brif-bg.jpg')
 	background-position: left center, center right
@@ -87,6 +87,7 @@
 		
 @media (max-width: 1200px)
 	.brif
+		margin-top: 20px
 		&__form
 			padding-left: 30px
 	.interview
@@ -106,18 +107,50 @@
 			margin-bottom: 15px
 		&__subtitle
 			margin-bottom: 30px		
-@media (max-width: 780px)
+@media (max-width: 974px)
 	.brif
-		background-image: url('../image/brif-color-bg.png'),url('../image/brif-bg.jpg')
+		margin-top: 0px
+		padding-top: 0px
+		background-image: url('../image/brif/brif-color-bg-min.png'),url('../image/brif/brif-bg.jpg')
 		background-position: top center, center bottom
-		background-size: 100% 50%, cover
+		background-size: 100% 45%, cover
 		background-repeat: repeat-x, no-repeat
 		&-block
 			flex-direction: column	
 		&__form 
-			margin-top: 80px			
+			margin-top: 80px	
+			position: relative
+			#username-error
+				color: red
+				position: absolute
+				top: 180px
+				left: 230px		
+			#phone-error
+				color: red
+				position: absolute
+				top: 280px
+				left: 230px		
+
+			#email-error	
+				color: red
+				position: absolute
+				top: 380px
+				left: 230px		
+			
 	.interview 
-		padding-left: 30px		
+		padding-left: 30px
+@media (max-width: 777px)	
+	.brif
+		&__form 
+			#username-error
+				top: 215px
+				left: 130px		
+			#phone-error
+				top: 318px
+				left: 130px		
+			#email-error	
+				top: 415px
+				left: 130px				
 @media (max-width: 450px)	
 	.brif
 		margin-top: 0
@@ -125,6 +158,15 @@
 		&__form
 			margin-top: 30px
 			padding-left: 0
+			#username-error
+				top: 195px
+				left: 30px		
+			#phone-error
+				top: 300px
+				left: 30px		
+			#email-error	
+				top: 395px
+				left: 30px	
 	.interview
 		padding-left: 0
 		padding-right: 0

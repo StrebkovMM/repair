@@ -27,11 +27,19 @@
 	&__input 
 		margin-bottom: 30px
 		width: 240px
-		&.phone
-			&.error
-				margin-right: 10px
 		&:first-child 
-			margin-right: 10px 		
+			margin-right: 10px 
+	&__form
+		#username-error
+			position: absolute
+			left: 60px
+			bottom: 173px
+			color: red
+		#phone-error
+			position: absolute
+			left: 305px
+			top: 255px
+			color: red				
 	&__button 
 		width: 100%
 		min-height: 70px
@@ -46,10 +54,7 @@
 		a 
 			+bold
 			color: $text-color
-			text-decoration: none
-	#phone-error 
-	
-		
+			text-decoration: none	
 
 @media (max-width: 1200px)  
 	.offer 
@@ -58,12 +63,27 @@
 			margin-bottom: 10px
 		&__button 
 			font-size: 12px	
+		&__form
+			#username-error
+				left: 150px
+				top: 300px
+			#phone-error
+				left: 150px
+				top: 370px		
 @media (max-width: 870px)
 	.offer
 		background: #ffffff
 		&-block 
-			width: 100%
-			padding-right: 0px   
+			width: 90%
+			padding-right: 0px
+			margin: auto 
+		&__form
+			#username-error
+				left: 100px
+				top: 230px
+			#phone-error
+				left: 100px
+				top: 300px		  
 @media (max-width: 550px)
 	.offer
 		padding-top: 50px 
@@ -81,5 +101,11 @@
 			padding: 20px 45px
 		&__footer 
 			display: block		
-
+		&__form
+			#username-error
+				left: 150px
+				top: 195px
+			#phone-error
+				left: 150px
+				top: 265px	
 

@@ -10,22 +10,12 @@ img
 	margin: 0 auto
 .container-portfolio
 	width: 1200px
-	margin: 0 auto	
-@media (max-width: 1200px)
-	.container 
-		width: 760px		
-@media (max-width: 768px)
-	.container 
-		max-width: 580px
-		width: 90%				
+	margin: 0 auto				
 .button 
 	border-radius: 10px
 	background-color: $main-color
 	border: none
 	padding: 20px 30px
-	&:hover 	
-		background-color: lighten($main-color, 10%)
-		cursor: pointer
 .section 	
 	padding: 70px 0
 	&-title 
@@ -43,6 +33,18 @@ img
 .arrows	
 	&__left, &__right
 		cursor: pointer
-.error
+@media (min-width: 1200px)
+	.button 
+		&:hover 	
+			background-color: lighten($main-color, 10%)
+			cursor: pointer		
+@media (max-width: 1200px)
+	.container 
+		width: 760px			
+
+@media (max-width: 768px)
+	.container 
+		max-width: 580px
+		width: 90%	
 	
 
