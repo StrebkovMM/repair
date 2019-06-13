@@ -23,7 +23,7 @@
 						<a href="tel:+7(495)42-251-31" class="navbar__phone">+7 (495) 42-251-31 </a>
 					</div>
 					<!-- /.navbar__contacts -->
-					<button class="button navbar__button wow pulse infinite" data-wow-duration="2s" onclick="ym(53985082, 'reachGoal', 'button'); return true;" id="button" >Перезвоните мне</button>
+					<button class="button navbar__button wow  infinite" data-wow-duration="2s" onclick="ym(53985082, 'reachGoal', 'button'); return true;" id="button" >Перезвоните мне</button>
 				</div>
 				<!-- /.navbar__info -->
 			</div>
@@ -82,7 +82,7 @@
 					<form action="#" class="form offer__form" id="offer-form">
 						<input type="text" name="username"  class="input offer__input" placeholder="Ваше имя">
 						<input type="tel" name="phone" class="input offer__input phone"  placeholder="Ваш телефон">
-						<button class="button offer__button wow pulse infinite" data-wow-duration="2s">Получить бесплатный дизайн-проект</button>
+						<button class="button offer__button wow  infinite" data-wow-duration="2s">Получить бесплатный дизайн-проект</button>
 					</form>
 					<!-- /.form offer__form -->
 					<div class="offer__footer">
@@ -128,7 +128,7 @@
 						<div class="card__text">
 							<h4 class="card__title">Ремонт ванных комнат и с/у</h4>
 							<!-- /.card__title -->
-							<a href="#" class="card__link">Узнать цены</a>
+							<a href="#" class="card__link" id="button_1">Узнать цены</a>
 						</div>
 						<!-- /.card__text -->
 					</div>
@@ -139,7 +139,7 @@
 						<div class="card__text">
 							<h4 class="card__title">Ремонт комнат и квартир</h4>
 							<!-- /.card__title -->
-							<a href="#" class="card__link">Узнать цены</a>
+							<a href="#" class="card__link" id="button_2">Узнать цены</a>
 						</div>
 						<!-- /.card__text -->
 					</div>
@@ -150,7 +150,7 @@
 						<div class="card__text">
 							<h4 class="card__title">Отделка офисных помещений</h4>
 							<!-- /.card__title -->
-							<a href="#" class="card__link">Узнать цены</a>
+							<a href="#" class="card__link" id="button_3">Узнать цены</a>
 						</div>
 						<!-- /.card__text -->
 					</div>
@@ -161,7 +161,7 @@
 						<div class="card__text">
 							<h4 class="card__title">Ремонт в новостройках  </h4>
 							<!-- /.card__title -->
-							<a href="#" class="card__link">Узнать цены</a>
+							<a href="#" class="card__link" id="button_4">Узнать цены</a>
 						</div>
 						<!-- /.card__text -->
 					</div>
@@ -172,7 +172,7 @@
 						<div class="card__text">
 							<h4 class="card__title">Ремонт кухонь </h4>
 							<!-- /.card__title -->
-							<a href="#" class="card__link">Узнать цены</a>
+							<a href="#" class="card__link" id="button_5">Узнать цены</a>
 						</div>
 						<!-- /.card__text -->
 					</div>
@@ -183,7 +183,7 @@
 						<div class="card__text">
 							<h4 class="card__title">Ремонт дач и коттеджей </h4>
 							<!-- /.card__title -->
-							<a href="#" class="card__link">Узнать цены</a>
+							<a href="#" class="card__link" id="button_6">Узнать цены</a>
 						</div>
 						<!-- /.card__text -->
 					</div>
@@ -244,9 +244,12 @@
 		<!-- /.section steps -->
 
 		<section class="section statement">
-			<h2 class="section-title statement__title">Ремонт обойдется Вам дешевле, так как</h2> <span class="statement__subtitle"> мы используем качественне материалы по оптовым ценам</span>
-			<h2 class="statement__mobtitle">Ремонт обойдется Вам <br>дешевле, так как <br>мы используем качественне <br> материалы по оптовым ценам</h2>
-			 <!-- /.section-title statement__title --> 
+			<div class="container">
+				<h2 class="section-title statement__title">Ремонт обойдется Вам дешевле, так как</h2> <span class="statement__subtitle"> мы используем качественне материалы по оптовым ценам</span>
+				<h2 class="statement__mobtitle">Ремонт обойдется Вам <br>дешевле, так как <br>мы используем качественне <br> материалы по оптовым ценам</h2>
+			 <!-- /.section-title statement__title -->
+			</div>
+ 
 		</section>
 		<!-- /.section statement -->
 
@@ -403,47 +406,56 @@
   <script>
 		new WOW().init();
   	$(document).ready(function(){
-			// Валидация формы
-			$('#offer-form').validate({
-				rules: {
-					username: {
-						required: true,
-						minlength: 3,
-						maxlength: 15, 
-					},
-					phone: 'required',
-				},
-					messages: {
-						username: {
-							required: "Заполните поле",
-							minlength: "Минимум 3 символа",
-							maxlength: "Максимум 15 символов",	
-						},
-						phone: "Укажите телефон",
-					},		
+			$("#offer-form").validate({
+  			rules: {
+    			username: {
+      			required: true,
+      			minlength: 2,
+      			maxlength: 15
+    			},
+    			phone:{
+    				required: true
+    			}
+  			},
+  			messages: {
+   				username: {
+      			required: "Заполните поле",
+      			minlength: jQuery.validator.format("Осталось {0} символа!"),
+      			maxlength: jQuery.validator.format("Максимум {0} символов!")
+    			},
+    			phone: {
+    				required: "Укажите телефон"
+    			}
+  			}
 			});
-			$('#brif-form').validate({
-					rules: {
-					username: {
-						required: true,
-						minlength: 3,
-						maxlength: 15, 
-					},
-					phone: 'required',			
-					email: {
-						required: true,
-						email: true,
-					},
-				},
-					messages: {
-						username: {
-							required: "Заполните поле",
-							minlength: "Минимум 3 символа",
-							maxlength: "Максимум 15 символов",	
-						},
-						email: "Введите корректный email",
-						phone: "Укажите телефон",
-					},
+			$("#brif-form").validate({
+  			rules: {
+    			username: {
+      			required: true,
+      			minlength: 2,
+      			maxlength: 15
+    			},
+    			phone:{
+    				required: true
+    			},
+    			email: {
+				 		required: true,
+						email: true
+			 		}
+  			},
+  			messages: {
+   				username: {
+      			required: "Заполните поле",
+      			minlength: jQuery.validator.format("Осталось {0} символа!"),
+      			maxlength: jQuery.validator.format("Максимум {0} символов!")
+    			},
+    			phone: {
+    				required: "Укажите телефон"
+    			},
+    			email: {
+						required: "Введите корректный email"
+					}
+  			}
 			});	
 				// Маска для телефона
 				$('.phone').mask('8 (999) 999-99-99');
