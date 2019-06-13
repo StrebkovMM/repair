@@ -651,7 +651,7 @@ img {
 @media (max-width: 515px) {
   .hero-text__title, .hero-text__subtitle {
     width: 300px; } }
-@media (max-width: 330px) {
+@media (max-width: 340px) {
   .hero-text__title {
     font-size: 23px;
     width: 270px;
@@ -795,7 +795,7 @@ img {
       left: 150px;
       top: 265px; }
     .offer__feedback, .offer__tell {
-      min-width: 280px; } }
+      max-width: 280px; } }
 @media (max-width: 360px) {
   .offer {
     padding: 10px; }
