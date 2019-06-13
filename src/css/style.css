@@ -618,18 +618,12 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column; }
-  .hero-image {
-    margin: auto; }
   .hero-list {
-    margin-bottom: 40px;
-    padding-left: 135px; }
+    margin-bottom: 40px; }
   .hero-text {
     padding-right: 10px; }
-    .hero-text__title {
-      margin: auto; }
     .hero-text__subtitle {
-      padding: 20px 0;
-      margin: auto; } }
+      padding: 20px 0; } }
 @media (max-width: 768px) {
   .hero-text__title {
     font-size: 24px;
